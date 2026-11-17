@@ -15,9 +15,9 @@ def clean_text(text):
 
 @st.cache_resource
 def load_models():
-    tfidf = joblib.load("models/tfidf_vectorizer.pkl")
-    svc = joblib.load("models/linear_svc_model.pkl")
-    nb = joblib.load("models/naive_bayes_model.pkl")
+    tfidf = joblib.load("tfidf_vectorizer.pkl")
+    svc = joblib.load("linear_svc_model.pkl")
+    nb = joblib.load("naive_bayes_model.pkl")
     return tfidf, {"Linear SVC": svc, "Naive Bayes": nb}
 
 tfidf, models = load_models()
